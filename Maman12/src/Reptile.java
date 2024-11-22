@@ -1,5 +1,5 @@
 
-public abstract class Reptile extends Mamal{
+public abstract class Reptile extends Animal{
 	public Reptile(String name,double age, String color) {
 		super(name,age,color);
 	}
