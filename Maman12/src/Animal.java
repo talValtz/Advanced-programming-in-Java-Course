@@ -23,6 +23,16 @@ public abstract class Animal {
 	public double getAge() {
 		return this.age;
 	}
+	
+	public void setName(String name) {
+		this.name=name;
+	}
+	public void setColor(String color) {
+		this.color=color;
+	}
+	public void setAge(double age) {
+		this.age=age;
+	}
 	public String toString() {
 		return String.format("name: %s\n age: %.2f\n color: %s", getName(),getAge(),getColor());
 	}
