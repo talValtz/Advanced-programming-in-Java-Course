@@ -1,5 +1,5 @@
 
-public abstract class Animal {
+public abstract class Animal implements Cloneable {
 	private String name;
 	private double age;
 	private String color;
@@ -33,12 +33,19 @@ public abstract class Animal {
 	public void setAge(double age) {
 		this.age=age;
 	}
-	public String toString() {
-		return String.format("name: %s\n age: %.2f\n color: %s", getName(),getAge(),getColor());
-	}
+
+	 @Override
+	    public String toString() {
+	        return String.format("name: %s\n age: %.2f\n color: %s", name, age, color);
+	    }
 	public abstract void eat();
 	
 	public abstract void sleep();
+	
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+	return super.clone();
+	}
 	
 
 }

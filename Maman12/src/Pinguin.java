@@ -15,6 +15,9 @@ public class Pinguin extends Bird{
 		System.out.println("Parrot diet consists mainly of seeds, fruits, nuts, flowers, and leav");
 		
 	}
+	public void fly() {
+		System.out.println("Technicly pinguins can not fly");
+	}
 
 	@Override
 	public void sleep() {

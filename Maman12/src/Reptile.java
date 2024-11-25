@@ -9,5 +9,6 @@ public abstract class Reptile extends Animal{
 	public String toString() {
 		return "Reptile"+super.toString();
 	}
+	 public abstract void crawl();
 
 }

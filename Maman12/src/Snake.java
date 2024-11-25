@@ -10,13 +10,12 @@ public class Snake extends Reptile{
 		return "Snake"+super.toString();
 	}
 
-	@Override
+
 	public void eat() {
 		System.out.println("snakes eat warm blooded prey (rodents, rabbits, squirrels, birds)");
 		
 	}
 
-	@Override
 	public void sleep() {
 		System.out.println("snakes sleep about 16 hours per day");
 		
@@ -30,6 +29,11 @@ public class Snake extends Reptile{
 		}
 		Snake s=(Snake)other;
 		return this.getName().equals(s.getName())&&this.getColor().equals(s.getColor())&&(this.getAge()==s.getAge());
+	}
+	@Override
+	public void crawl() {
+		System.out.println("Snakes have a crawling or slithering type of movement");
+		
 	}
 
 }

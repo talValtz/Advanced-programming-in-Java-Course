@@ -26,5 +26,10 @@ public class Parrot extends Bird{
 		Parrot p=(Parrot)other;
 		return this.getName().equals(p.getName())&&this.getColor().equals(p.getColor())&&(this.getAge()==p.getAge());
 	}
+	@Override
+	public void fly() {
+		System.out.println("Average parrot can fly up to 30 miles");
+		
+	}
 
 }
