@@ -1,9 +1,10 @@
-
+// Abstract Animal class represents a general animal with basic properties and methods
 public abstract class Animal implements Cloneable {
 	private String name;
 	private double age;
 	private String color;
 	
+	//Constructors
 	public Animal() {
 		name="";
 		age=-1;
@@ -14,6 +15,8 @@ public abstract class Animal implements Cloneable {
 		this.age=age;
 		this.color=color;
 	}
+	
+	//Getters
 	public String getColor() {
 		return this.color;
 	}
@@ -24,6 +27,7 @@ public abstract class Animal implements Cloneable {
 		return this.age;
 	}
 	
+	//Setters
 	public void setName(String name) {
 		this.name=name;
 	}
@@ -34,18 +38,22 @@ public abstract class Animal implements Cloneable {
 		this.age=age;
 	}
 
-	 @Override
-	    public String toString() {
-	        return String.format("name: %s\n age: %.2f\n color: %s", name, age, color);
-	    }
+	//toString Function
+	@Override
+	public String toString() {
+		return String.format("name: %s, age: %.2f, color: %s", name, age, color);
+	}
+
+	public void sleep() {
+		System.out.println(this.name+" is sleeping");
+	}
+
 	public abstract void eat();
-	
-	public abstract void sleep();
-	
+
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
-	return super.clone();
+		return super.clone();
 	}
-	
+
 
 }

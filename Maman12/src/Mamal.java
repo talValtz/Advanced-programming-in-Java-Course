@@ -1,4 +1,4 @@
-
+// Abstract Mamal class extends Animal and represents general mammal behaviors
 public abstract class  Mamal extends Animal {
 	
 	public Mamal(String name,double age, String color) {
@@ -13,13 +13,4 @@ public abstract class  Mamal extends Animal {
 		return "Mamal "+super.toString();
 	}
 	
-	public abstract void AvgLifespan();
-	
-	
-	
-	
-
-	
-	 
-
 }

@@ -1,6 +1,8 @@
+// Dog class extends Mamal and represents a dog
 
 public class Dog extends Mamal{
 	private Owner owner;
+	//Constructors
 	public Dog(String name,double age, String color) {
 		super(name,age,color);
 		this.owner=new Owner();
@@ -13,28 +15,39 @@ public class Dog extends Mamal{
 		super();
 		this.owner=new Owner();
 	}
+	
+	//Getter
 	public Owner getOwner() {
 		return this.owner;
 	}
+	
+	//Setter
 	public void setOwner(Owner owner) {
 		this.owner=owner;
 	}
 
 	@Override
 	public void eat() {
-		System.out.println("Bonzo");
+		System.out.println("I'm eating bonzo");
 		
+	}
+	
+	public void seat() {
+		System.out.println("Seating");
 	}
 
+
 	@Override
-	public void sleep() {
-		System.out.println("dogs are sleep for 15 hours per day");
+	public String toString() {
+        return super.toString() +this.ownerString();
+    }
+	private String ownerString() {
+		if(owner.getName()!=null) {
+			return "Owner:"+owner.toString();
+		}
+		return "";
 		
 	}
-	@Override
-    public String toString() {
-        return super.toString() + (owner.getName() != null ? ", Owner: " + owner : "");
-    }
 	public boolean equals(Object other) {
 		if(!(other instanceof Dog)) {
 			return false;
@@ -42,11 +55,7 @@ public class Dog extends Mamal{
 		Dog d=(Dog)other;
 		return this.getName().equals(d.getName())&&this.getColor().equals(d.getColor())&&(this.getAge()==d.getAge());
 	}
-	@Override
-	public void AvgLifespan() {
-		System.out.println("The average lifespan for a pet dog is probably around 10 to 13 years.");
-		
-	}
+
 	  @Override
 	    public Dog clone() {
 	        try {

@@ -1,6 +1,7 @@
+// Cat class extends Bird and represents a Parrot
 
 public class Parrot extends Bird{
-	
+
 	public Parrot(String name,double age, String color) {
 		super(name,age,color);
 	}
@@ -8,17 +9,16 @@ public class Parrot extends Bird{
 		super();
 	}
 
-	@Override
-	public void eat() {
-		System.out.println("Pinguin eating Krill");
-		
+	public void fly() {
+		System.out.println(this.getName()+"is flying");
 	}
 
 	@Override
-	public void sleep() {
-		System.out.println("dogs are sleep for 11 hours per day");
-		
+	public void eat() {
+		System.out.println("Pinguin eating nuts");
+
 	}
+
 	public boolean equals(Object other) {
 		if(!(other instanceof Parrot)) {
 			return false;
@@ -26,10 +26,6 @@ public class Parrot extends Bird{
 		Parrot p=(Parrot)other;
 		return this.getName().equals(p.getName())&&this.getColor().equals(p.getColor())&&(this.getAge()==p.getAge());
 	}
-	@Override
-	public void fly() {
-		System.out.println("Average parrot can fly up to 30 miles");
-		
-	}
+
 
 }

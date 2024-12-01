@@ -1,14 +1,15 @@
-
+// Abstract Bird class extends Animal and represents general bird behaviors
 public abstract class Bird extends Animal{
+
 	public Bird(String name,double age, String color) {
 		super(name,age,color);
 	}
 	public Bird() {
 		super();
 	}
+
 	public String toString() {
 		return "Bird "+super.toString();
 	}
-	public abstract void fly();
 
 }
